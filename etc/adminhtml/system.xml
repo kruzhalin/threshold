@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="sales">
+            <group id="threshold_validation" translate="label" sortOrder="55" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Threshold Validation</label>
+                <field id="active" translate="label" sortOrder="5" type="select" showInDefault="1" showInWebsite="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="threshold_value" translate="label comment" sortOrder="57" showInDefault="1" showInWebsite="1">
+                    <label>Threshold Value</label>
+                    <validate>validate-number validate-greater-than-zero</validate>
+                    <depends>
+                        <field id="active">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
