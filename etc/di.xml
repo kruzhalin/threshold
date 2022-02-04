@@ -3,4 +3,5 @@
     <type name="Magento\Checkout\Controller\Cart\Add">
         <plugin name="Kruzhalin_Threshold::add_to_cart_validation" type="Kruzhalin\Threshold\Plugin\Checkout\Controller\Cart\Add" sortOrder="10"/>
     </type>
+    <preference for="Kruzhalin\Threshold\Api\ThresholdInterface" type="Kruzhalin\Threshold\Model\Api\Threshold"/>
 </config>
